@@ -1,0 +1,31 @@
+{
+  "schema": "voice2action-lexicon-v1",
+  "cvnss4_status": "pending_version_pinned_golden_codec",
+  "warning": "Action IDs only. Don't invent CVNSS4.0 codes. Membership does not prove audio-to-action correctness.",
+  "actions": {
+    "stop": {
+      "vi": "dừng lại",
+      "cvnss4": null,
+      "type": "stop",
+      "parameter": 0
+    },
+    "forward": {
+      "vi": "tiến lên",
+      "cvnss4": null,
+      "type": "move",
+      "parameter": 0.25
+    },
+    "left": {
+      "vi": "rẽ trái",
+      "cvnss4": null,
+      "type": "turn",
+      "parameter": -45
+    },
+    "right": {
+      "vi": "rẽ phải",
+      "cvnss4": null,
+      "type": "turn",
+      "parameter": 45
+    }
+  }
+}
