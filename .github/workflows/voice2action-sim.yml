@@ -1,0 +1,20 @@
+name: Voice2Action safety smoke tests
+on:
+  push:
+    paths:
+      - 'experiments/voice2action/**'
+      - '.github/workflows/voice2action-sim.yml'
+  pull_request:
+    paths:
+      - 'experiments/voice2action/**'
+      - '.github/workflows/voice2action-sim.yml'
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install 'numpy>=1.24,<3' 'scipy>=1.10,<2' 'pytest>=7,<10'
+      - run: python -m pytest -q experiments/voice2action/tests
